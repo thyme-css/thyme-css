@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-A PostCSS utility first CSS for **modern browsers.**
+A PostCSS utility first CSS for modern browsers.
 </p>
 
 ## Why?
@@ -34,6 +34,9 @@ To learn deep aspects of css, that's all.
 - testing
 - deploy method
 
+---
+
 **Illustration**
 
 <a href="https://www.freepik.es/vectors/flor">Vector de Flor creado por macrovector - www.freepik.es</a>
+
