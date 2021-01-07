@@ -5,12 +5,12 @@
 </p>
 
 <p align="center">
-A PostCSS utility first CSS for modern browsers.
+A utility first CSS for modern browsers.
 </p>
 
 ## Why?
 
-To learn deep aspects of css, that's all.
+To learn deep aspects of css (or not), that's all.
 
 ## Features
 
