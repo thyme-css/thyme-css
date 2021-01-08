@@ -1,0 +1,7 @@
+// bg-1, bg-2, bg-n, ...
+$bgColors:
+  var(--gray-01),
+  var(--gray-02),
+  var(--gray-03);
+
+@include thyme_class("bg-", background-color, $bgColors);

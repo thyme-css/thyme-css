@@ -1,0 +1,7 @@
+// text-1, text-2, text-n, ...
+$fgColors:
+  var(--gray-01),
+  var(--gray-02),
+  var(--gray-03);
+
+@include thyme_class("text-", color, $fgColors);

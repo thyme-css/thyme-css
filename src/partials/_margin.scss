@@ -1,0 +1,18 @@
+$margins:
+  var(--spc-xs),
+  var(--spc-s),
+  var(--spc-m),
+  var(--spc-l),
+  var(--spc-xl),
+  var(--spc-xxl),
+  var(--spc-xxxl);
+
+@include thyme_class ("m-", margin, $margins);
+
+@include thyme_class ("mt-", margin-top, $margins);
+@include thyme_class ("mr-", margin-right, $margins);
+@include thyme_class ("mb-", margin-bottom, $margins);
+@include thyme_class ("ml-", margin-left, $margins);
+
+@include thyme_class ("mx-", (margin-left, margin-right), $margins);
+@include thyme_class ("my-", (margin-top, margin-bottom), $margins);

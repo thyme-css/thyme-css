@@ -1,0 +1,19 @@
+/* breakpoint-name, breakpoint-min-width & container width */
+$viewports:
+  "sm" 480px,
+  "md" 720px,
+  "l" 960px,
+  "xl" 1152px,
+  "xxl" 1536px;
+
+/* Generate custom media */
+@each $name, $width in $viewports {
+  @custom-media --#{$name} (min-width: #{$width});
+}
+
+/* Geneate containers css custom properties */
+:root {
+  @each $name, $width in $viewports {
+    --#{$name}-container: #{$width};
+  }
+}
