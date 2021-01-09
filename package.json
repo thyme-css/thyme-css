@@ -6,17 +6,19 @@
   "author": "Francis <hisconer@gmail.com> (https://www.secuoyas.com/)",
   "license": "MIT",
   "scripts": {
-    "sass": "node-sass --include-path='./node_modules' --output-style compressed -o src src/compile.scss",
+    "sass": "node-sass --include-path='./node_modules' -o src src/compile.scss",
+    "sass:watch": "node-sass --include-path='./node_modules'  -wo src src/compile.scss",
     "post": "npx postcss -u autoprefixer -r src/compile.css",
     "build": "npm run sass && npx postcss -r src/compile.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.1",
     "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.3",
     "postcss-cli": "^8.3.1",
+    "postcss-combine-media-query": "^1.0.1",
     "postcss-preset-env": "^6.7.0"
   }
 }
-

@@ -1,0 +1,26 @@
+@import "mixins";
+
+$columns: 12;
+
+.w-screen { width: 100vw; }
+.w-full { width: 100%; }
+@each $name, $_ in $viewports {
+  @media (--#{$name}) {
+    .#{$name}\:w-screen { width: 100vw; }
+    .#{$name}\:w-full { width: 100%; }
+  }
+}
+
+@for $i from 1 through $columns {
+  // Mobile <
+  .w-#{$i}\/#{$columns} { width: ( $i / $columns ) * 100%; }
+
+  // > Mobile
+  @each $name, $_ in $viewports {
+    @media (--#{$name}) {
+      .#{$name}\:w-#{$i}\/#{$columns} {
+        width: ( $i / $columns ) * 100%;
+      }
+    }
+  }
+}

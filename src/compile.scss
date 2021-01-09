@@ -1,8 +1,17 @@
-@import "partials/_theme";
+body, html {
+  * { box-sizing: border-box;  }
+  margin: 0;
+  padding: 0;
+}
 
+@import "partials/_theme";
 @import "partials/_mixins";
 
 @import "partials/_textColor";
 @import "partials/_background";
 @import "partials/_margin";
 @import "partials/_padding";
+
+@import "partials/_flex";
+@import "partials/_width";
+

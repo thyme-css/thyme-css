@@ -1,7 +1,8 @@
-// bg-1, bg-2, bg-n, ...
+@import "mixins";
+
 $bgColors:
-  var(--gray-01),
-  var(--gray-02),
-  var(--gray-03);
+  var(--color-gray-01),
+  var(--color-gray-02),
+  var(--color-gray-03);
 
 @include thyme_class("bg-", background-color, $bgColors);
