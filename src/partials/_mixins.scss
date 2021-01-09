@@ -1,6 +1,6 @@
 @import "responsive";
 
-@mixin thyme_class ( $className, $properties, $map) {
+@mixin thyme_class ($className, $properties, $map) {
   @for $i from 1 through length($map) {
     $item: nth($map, $i);
     $cssVarName: nth($item, 1);
@@ -22,3 +22,14 @@
     }
   }
 }
+
+@mixin thyme_class_responsive ($className, $css) {
+  @each $name, $_ in $viewports {
+    $prop: nth($css, 1);
+    $value: nth($css, 2);
+    @media (--#{$name}) {
+      .#{$name}\:#{$className} { #{$prop}: #{$value} }
+    }
+  }
+}
+

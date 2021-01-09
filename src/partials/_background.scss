@@ -3,6 +3,7 @@
 $bgColors:
   var(--color-gray-01),
   var(--color-gray-02),
-  var(--color-gray-03);
+  var(--color-gray-03),
+  var(--color-gray-04);
 
 @include thyme_class("bg-", background-color, $bgColors);

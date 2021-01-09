@@ -1,8 +1,4 @@
-body, html {
-  * { box-sizing: border-box;  }
-  margin: 0;
-  padding: 0;
-}
+body, html { * { box-sizing: border-box;  } margin: 0; padding: 0; }
 
 @import "partials/_theme";
 @import "partials/_mixins";
@@ -12,6 +8,6 @@ body, html {
 @import "partials/_margin";
 @import "partials/_padding";
 
-@import "partials/_flex";
 @import "partials/_width";
+@import "partials/_flex";
 
