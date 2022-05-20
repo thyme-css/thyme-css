@@ -44,22 +44,18 @@
   }
 }
 
-@mixin thyme_class($className, $properties, $names) {
-  @for $i from 1 through length($names) {
-    $keyName: nth(map-keys($names), $i);
-    $valueName: map-get($names, $keyName);
-
+@mixin thyme_class($className, $properties, $tokens) {
+  @each $name, $value in $tokens {
     @each $prop in $properties {
-      .#{$className}#{$keyName} {
-        #{$prop}: #{$valueName};
+      .#{$className}#{$name} {
+        #{$prop}: #{$value};
       }
     }
-
-    @each $name, $_ in $breakpoints {
-      @include media-query($name) {
+    @each $mq, $_ in $breakpoints {
+      @include media-query($mq) {
         @each $prop in $properties {
-          .#{$name}\:#{$className}#{$keyName} {
-            #{$prop}: #{$valueName};
+          .#{$mq}\:#{$className}#{$name} {
+            #{$prop}: #{$value};
           }
         }
       }

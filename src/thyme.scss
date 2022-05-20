@@ -1,22 +1,12 @@
 @use 'sass:math';
 
-body,
-html {
-  * {
-    box-sizing: border-box;
-  }
-  margin: 0;
-  padding: 0;
-}
-
 @import '../tokens';
-@import 'partials/_mixins';
 
+@import 'partials/_mixins';
 @import 'partials/_textColor';
 @import 'partials/_background';
 @import 'partials/_margin';
 @import 'partials/_padding';
-
 @import 'partials/_width';
 @import 'partials/_flex';
 
