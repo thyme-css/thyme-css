@@ -1,0 +1,35 @@
+$columns: 16;
+
+// Breakpoint-name, breakpoint-min-width & container width
+$viewports: (
+  "sm": 480px,
+  "md": 720px,
+  "l": 960px,
+  "xl": 1152px,
+  "xxl": 1536px,
+);
+
+// Spacing
+$spacing: (
+  "xs": var(--spc-xs),
+  "s": var(--spc-s),
+  "m": var(--spc-m),
+  "l": var(--spc-l),
+  "xl": var(--spc-xl),
+  "xxl": var(--spc-xxl),
+  "xxxl": var(--spc-xxxl),
+);
+
+$foreground-colors: (
+  "01": var(--color-gray-01),
+  "02": var(--color-gray-02),
+  "03": var(--color-gray-03),
+  "04": var(--color-gray-04),
+);
+
+$background-colors: (
+  "01": var(--color-gray-04),
+  "02": var(--color-gray-03),
+  "03": var(--color-gray-02),
+  "04": var(--color-gray-01),
+);

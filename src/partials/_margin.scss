@@ -1,19 +1,16 @@
-$map: (
-  "xs": var(--spc-xs),
-  "s": var(--spc-s),
-  "m": var(--spc-m),
-  "l": var(--spc-l),
-  "xl": var(--spc-xl),
-  "xxl": var(--spc-xxl),
-  "xxxl": var(--spc-xxxl),
-);
+@import "../../thyme.config.scss";
 
-@include thyme_class("m-", margin, $map);
+// Margin
+@include thyme_class("m-", margin, $spacing);
 
-@include thyme_class("mt-", margin-top, $map);
-@include thyme_class("mr-", margin-right, $map);
-@include thyme_class("mb-", margin-bottom, $map);
-@include thyme_class("ml-", margin-left, $map);
+// Margin top, right, bottom, left
+@include thyme_class("mt-", margin-top, $spacing);
+@include thyme_class("mr-", margin-right, $spacing);
+@include thyme_class("mb-", margin-bottom, $spacing);
+@include thyme_class("ml-", margin-left, $spacing);
 
-@include thyme_class("mx-", (margin-left, margin-right), $map);
-@include thyme_class("my-", (margin-top, margin-bottom), $map);
+// Margin inline
+@include thyme_class("mx-", (margin-left, margin-right), $spacing);
+
+// Margin block
+@include thyme_class("my-", (margin-top, margin-bottom), $spacing);

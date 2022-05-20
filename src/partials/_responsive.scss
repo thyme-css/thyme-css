@@ -1,5 +1,4 @@
-/* Breakpoint-name, breakpoint-min-width & container width */
-$viewports: "sm" 480px, "md" 720px, "l" 960px, "xl" 1152px, "xxl" 1536px;
+@import "../../thyme.config.scss";
 
 /* Custom media */
 @each $name, $width in $viewports {

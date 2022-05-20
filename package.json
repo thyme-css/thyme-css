@@ -6,8 +6,8 @@
   "author": "Francis <hisconer@gmail.com> (https://www.secuoyas.com/)",
   "license": "MIT",
   "scripts": {
-    "sass": "sass src/compile.scss src/compile.css",
-    "sass:watch": "sass -w src/compile.scss src/compile.css",
+    "sass": "sass src/thyme.scss src/compile.css",
+    "sass:watch": "sass -w src/thyme.scss src/compile.css",
     "post": "npx postcss -u autoprefixer -r src/compile.css",
     "build": "npm run sass && npx postcss -r src/compile.css",
     "postcss:watch": "npx postcss src/compile.css -o src/compile-post.css -w",

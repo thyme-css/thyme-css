@@ -9,7 +9,7 @@ html {
   padding: 0;
 }
 
-@import "partials/_theme";
+@import "../tokens";
 @import "partials/_mixins";
 
 @import "partials/_textColor";

@@ -1,5 +1,6 @@
 @use "sass:map";
 @import "responsive";
+@import "../../thyme.config.scss";
 
 @mixin v-stack($size: 16px) {
   & > * + * {

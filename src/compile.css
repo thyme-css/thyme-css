@@ -28,7 +28,26 @@ html * {
   --spc-xxxl: 192px;
 }
 
-/* Breakpoint-name, breakpoint-min-width & container width */
+[data-theme-dark] {
+  /* colors */
+  --color-white: #ffffff;
+  --color-black: #101010;
+  --color-brand-01: #101010;
+  --color-brand-02: #bea382;
+  --color-gray-01: #101010;
+  --color-gray-02: #757575;
+  --color-gray-03: #999999;
+  --color-gray-04: #f4f4f4;
+  /* spacing */
+  --spc-xs: 4px;
+  --spc-s: 8px;
+  --spc-m: 16px;
+  --spc-l: 32px;
+  --spc-xl: 64px;
+  --spc-xxl: 128px;
+  --spc-xxxl: 192px;
+}
+
 /* Custom media */
 @custom-media --sm (min-width: 480px);
 @custom-media --md (min-width: 720px);
@@ -3790,7 +3809,6 @@ html * {
     padding-bottom: var(--spc-xxxl);
   }
 }
-/* Breakpoint-name, breakpoint-min-width & container width */
 /* Custom media */
 @custom-media --sm (min-width: 480px);
 @custom-media --md (min-width: 720px);

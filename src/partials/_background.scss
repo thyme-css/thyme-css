@@ -1,8 +1,3 @@
-$map: (
-  "01": var(--color-gray-04),
-  "02": var(--color-gray-03),
-  "03": var(--color-gray-02),
-  "04": var(--color-gray-01),
-);
+@import "../../thyme.config.scss";
 
-@include thyme_class("bg-", background-color, $map);
+@include thyme_class("bg-", background-color, $background-colors);
