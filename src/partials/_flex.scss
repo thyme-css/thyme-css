@@ -1,14 +1,8 @@
-@include thyme_class_responsive("flex", (display, flex));
-@include thyme_class_responsive("flex-col", (flex-direction, column));
-@include thyme_class_responsive("flex-row", (flex-direction, row));
-@include thyme_class_responsive(
-  "flex-col-reverse",
-  (flex-direction, column-reverse)
-);
-@include thyme_class_responsive(
-  "flex-row-reverse",
-  (flex-direction, row-reverse)
-);
-@include thyme_class_responsive("flex-wrap", (flex-wrap, wrap));
-@include thyme_class_responsive("flex-wrap-reverse", (flex-wrap, wrap-reverse));
-@include thyme_class_responsive("flex-nowrap", (flex-wrap, nowrap));
+@include thyme_class_responsive('flex', (display, flex));
+@include thyme_class_responsive('flex-col', (flex-direction, column));
+@include thyme_class_responsive('flex-row', (flex-direction, row));
+@include thyme_class_responsive('flex-col-reverse', (flex-direction, column-reverse));
+@include thyme_class_responsive('flex-row-reverse', (flex-direction, row-reverse));
+@include thyme_class_responsive('flex-wrap', (flex-wrap, wrap));
+@include thyme_class_responsive('flex-wrap-reverse', (flex-wrap, wrap-reverse));
+@include thyme_class_responsive('flex-nowrap', (flex-wrap, nowrap));

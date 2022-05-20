@@ -1,3 +1,8 @@
-@import "../../thyme.config.scss";
+@use 'sass:map';
+@import '../../thyme.config.scss';
 
-@include thyme_class("bg-", background-color, $background-colors);
+@include thyme_class(
+  map.get($classes-prefixes, 'background'),
+  background-color,
+  $background-colors
+);

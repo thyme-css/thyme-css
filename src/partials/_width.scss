@@ -1,5 +1,8 @@
-@import "../../thyme.config.scss";
-@import "mixins";
+@use 'sass:map';
+@use 'sass:math';
+
+/// Thyme utility file
+@import '../../thyme.config.scss';
 
 .w-screen {
   width: 100vw;
@@ -8,8 +11,8 @@
   width: 100%;
 }
 
-@each $name, $_ in $viewports {
-  @media (--#{$name}) {
+@each $name, $_ in $breakpoints {
+  @include media-query($name) {
     .#{$name}\:w-screen {
       width: 100vw;
     }
@@ -26,8 +29,8 @@
   }
 
   // > Mobile
-  @each $name, $_ in $viewports {
-    @media (--#{$name}) {
+  @each $name, $_ in $breakpoints {
+    @include media-query($name) {
       .#{$name}\:w-#{$i}\/#{$columns} {
         width: math.div($i, $columns) * 100%;
       }

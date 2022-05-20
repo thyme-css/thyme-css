@@ -1,6 +1,23 @@
-@use "sass:map";
-@import "responsive";
-@import "../../thyme.config.scss";
+@use 'sass:map';
+@import '../../thyme.config.scss';
+
+@function get-thyme-config($key, $value) {
+  $v: map.get($key, $value);
+  @if ($v) {
+    @return map.get($key, $value);
+  }
+}
+
+@mixin media-query($key) {
+  $matched-breakpoint: map-get($breakpoints, $key);
+  @if not $matched-breakpoint {
+    // @warn #{ 'Breakpoint, ‘' + $key + '’ not found in `$thyme-config`. Make sure it’s set in the ‘breakpoints’ section.' };
+  } @else {
+    @media #{ $matched-breakpoint } {
+      @content;
+    }
+  }
+}
 
 @mixin v-stack($size: 16px) {
   & > * + * {
@@ -8,13 +25,14 @@
   }
 }
 
-@mixin r-v-stack($resMap) {
-  @include v-stack(map.get($resMap, "def"));
-  @each $mq, $value in $resMap {
-    // skip default width (mobile)
-    @if ($mq != "def") {
-      @media (--#{$mq}) {
-        @include v-stack($value);
+@mixin r-v-stack($responsiveProps) {
+  // For initial width-breakpoint
+  @include v-stack(map.get($responsiveProps, 'def'));
+  // For larger widths
+  @each $mqName, $propValue in $responsiveProps {
+    @if ($mqName) {
+      @include media-query($mqName) {
+        @include v-stack($propValue);
       }
     }
   }
@@ -37,8 +55,8 @@
       }
     }
 
-    @each $name, $_ in $viewports {
-      @media (--#{$name}) {
+    @each $name, $_ in $breakpoints {
+      @include media-query($name) {
         @each $prop in $properties {
           .#{$name}\:#{$className}#{$keyName} {
             #{$prop}: #{$valueName};
@@ -50,13 +68,13 @@
 }
 
 @mixin thyme_class_responsive($className, $css) {
-  @each $name, $_ in $viewports {
+  @each $name, $_ in $breakpoints {
     $prop: nth($css, 1);
     $value: nth($css, 2);
     .#{$className} {
       #{$prop}: #{$value};
     }
-    @media (--#{$name}) {
+    @include media-query($name) {
       .#{$name}\:#{$className} {
         #{$prop}: #{$value};
       }

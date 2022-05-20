@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 body,
 html {
@@ -9,16 +9,16 @@ html {
   padding: 0;
 }
 
-@import "../tokens";
-@import "partials/_mixins";
+@import '../tokens';
+@import 'partials/_mixins';
 
-@import "partials/_textColor";
-@import "partials/_background";
-@import "partials/_margin";
-@import "partials/_padding";
+@import 'partials/_textColor';
+@import 'partials/_background';
+@import 'partials/_margin';
+@import 'partials/_padding';
 
-@import "partials/_width";
-@import "partials/_flex";
+@import 'partials/_width';
+@import 'partials/_flex';
 
 .component {
   padding: var(--spc-m);
@@ -27,7 +27,7 @@ html {
   flex-direction: column;
   @include v-stack(var(--spc-m));
 
-  @media (--md) {
+  @include media-query('md') {
     flex-direction: row;
     @include v-stack(0);
     @include h-stack(var(--spc-m));
@@ -36,10 +36,10 @@ html {
 
 .vertical-stack {
   @include v-stack(0);
-  @media (--sm) {
+  @include media-query('sm') {
     @include v-stack(var(--spc-m));
   }
-  @media (--l) {
+  @include media-query('l') {
     @include v-stack(var(--spc-xl));
   }
 }
@@ -47,9 +47,9 @@ html {
 .vertical-stack-2 {
   @include r-v-stack(
     (
-      "def": var(--spc-xs),
-      "md": var(--spc-m),
-      "l": var(--spc-xl),
+      'def': var(--spc-xs),
+      'md': var(--spc-m),
+      'l': var(--spc-xl)
     )
   );
 }
