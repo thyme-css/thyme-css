@@ -1,4 +1,13 @@
-body, html { * { box-sizing: border-box;  } margin: 0; padding: 0; }
+@use "sass:math";
+
+body,
+html {
+  * {
+    box-sizing: border-box;
+  }
+  margin: 0;
+  padding: 0;
+}
 
 @import "partials/_theme";
 @import "partials/_mixins";
@@ -11,3 +20,36 @@ body, html { * { box-sizing: border-box;  } margin: 0; padding: 0; }
 @import "partials/_width";
 @import "partials/_flex";
 
+.component {
+  padding: var(--spc-m);
+  border: 16px solid var(--color-gray-02);
+  display: flex;
+  flex-direction: column;
+  @include v-stack(var(--spc-m));
+
+  @media (--md) {
+    flex-direction: row;
+    @include v-stack(0);
+    @include h-stack(var(--spc-m));
+  }
+}
+
+.vertical-stack {
+  @include v-stack(0);
+  @media (--sm) {
+    @include v-stack(var(--spc-m));
+  }
+  @media (--l) {
+    @include v-stack(var(--spc-xl));
+  }
+}
+
+.vertical-stack-2 {
+  @include r-v-stack(
+    (
+      "def": var(--spc-xs),
+      "md": var(--spc-m),
+      "l": var(--spc-xl),
+    )
+  );
+}

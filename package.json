@@ -6,8 +6,8 @@
   "author": "Francis <hisconer@gmail.com> (https://www.secuoyas.com/)",
   "license": "MIT",
   "scripts": {
-    "sass": "node-sass --include-path='./node_modules' -o src src/compile.scss",
-    "sass:watch": "node-sass --include-path='./node_modules' -wo src src/compile.scss",
+    "sass": "sass src/compile.scss src/compile.css",
+    "sass:watch": "sass -w src/compile.scss src/compile.css",
     "post": "npx postcss -u autoprefixer -r src/compile.css",
     "build": "npm run sass && npx postcss -r src/compile.css",
     "postcss:watch": "npx postcss src/compile.css -o src/compile-post.css -w",
@@ -17,11 +17,13 @@
     "autoprefixer": "^10.2.1",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
-    "node-sass": "^5.0.0",
     "postcss": "^8.2.3",
     "postcss-cli": "^8.3.1",
+    "postcss-combine-duplicated-selectors": "^10.0.2",
     "postcss-combine-media-query": "^1.0.1",
-    "postcss-preset-env": "^6.7.0"
+    "postcss-mixins": "^7.0.3",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-sort-media-queries": "^3.1.1",
+    "sass": "^1.51.0"
   }
 }
-

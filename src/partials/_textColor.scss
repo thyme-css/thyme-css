@@ -1,7 +1,8 @@
-$fgColors:
-  var(--color-gray-01),
-  var(--color-gray-02),
-  var(--color-gray-03),
-  var(--color-gray-04);
+$map: (
+  "01": var(--color-gray-01),
+  "02": var(--color-gray-02),
+  "03": var(--color-gray-03),
+  "04": var(--color-gray-04),
+);
 
-@include thyme_class("text-", color, $fgColors);
+@include thyme_class("text-", color, $map);

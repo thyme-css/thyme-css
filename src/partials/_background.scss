@@ -1,9 +1,8 @@
-@import "mixins";
+$map: (
+  "01": var(--color-gray-04),
+  "02": var(--color-gray-03),
+  "03": var(--color-gray-02),
+  "04": var(--color-gray-01),
+);
 
-$bgColors:
-  var(--color-gray-01),
-  var(--color-gray-02),
-  var(--color-gray-03),
-  var(--color-gray-04);
-
-@include thyme_class("bg-", background-color, $bgColors);
+@include thyme_class("bg-", background-color, $map);

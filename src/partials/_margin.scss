@@ -1,18 +1,19 @@
-$margins:
-  var(--spc-xs),
-  var(--spc-s),
-  var(--spc-m),
-  var(--spc-l),
-  var(--spc-xl),
-  var(--spc-xxl),
-  var(--spc-xxxl);
+$map: (
+  "xs": var(--spc-xs),
+  "s": var(--spc-s),
+  "m": var(--spc-m),
+  "l": var(--spc-l),
+  "xl": var(--spc-xl),
+  "xxl": var(--spc-xxl),
+  "xxxl": var(--spc-xxxl),
+);
 
-@include thyme_class ("m-", margin, $margins);
+@include thyme_class("m-", margin, $map);
 
-@include thyme_class ("mt-", margin-top, $margins);
-@include thyme_class ("mr-", margin-right, $margins);
-@include thyme_class ("mb-", margin-bottom, $margins);
-@include thyme_class ("ml-", margin-left, $margins);
+@include thyme_class("mt-", margin-top, $map);
+@include thyme_class("mr-", margin-right, $map);
+@include thyme_class("mb-", margin-bottom, $map);
+@include thyme_class("ml-", margin-left, $map);
 
-@include thyme_class ("mx-", (margin-left, margin-right), $margins);
-@include thyme_class ("my-", (margin-top, margin-bottom), $margins);
+@include thyme_class("mx-", (margin-left, margin-right), $map);
+@include thyme_class("my-", (margin-top, margin-bottom), $map);

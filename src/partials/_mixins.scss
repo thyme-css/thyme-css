@@ -1,21 +1,46 @@
+@use "sass:map";
 @import "responsive";
 
-@mixin thyme_class ($className, $properties, $map) {
-  @for $i from 1 through length($map) {
-    $item: nth($map, $i);
-    $cssVarName: nth($item, 1);
+@mixin v-stack($size: 16px) {
+  & > * + * {
+    margin-top: $size;
+  }
+}
+
+@mixin r-v-stack($resMap) {
+  @include v-stack(map.get($resMap, "def"));
+  @each $mq, $value in $resMap {
+    // skip default width (mobile)
+    @if ($mq != "def") {
+      @media (--#{$mq}) {
+        @include v-stack($value);
+      }
+    }
+  }
+}
+
+@mixin h-stack($size: 16px) {
+  & > * + * {
+    margin-left: $size;
+  }
+}
+
+@mixin thyme_class($className, $properties, $names) {
+  @for $i from 1 through length($names) {
+    $keyName: nth(map-keys($names), $i);
+    $valueName: map-get($names, $keyName);
 
     @each $prop in $properties {
-      .#{$className}#{$i} {
-        #{$prop}: #{$cssVarName}
+      .#{$className}#{$keyName} {
+        #{$prop}: #{$valueName};
       }
     }
 
     @each $name, $_ in $viewports {
       @media (--#{$name}) {
         @each $prop in $properties {
-          .#{$name}\:#{$className}#{$i} {
-            #{$prop}: #{$cssVarName};
+          .#{$name}\:#{$className}#{$keyName} {
+            #{$prop}: #{$valueName};
           }
         }
       }
@@ -23,13 +48,17 @@
   }
 }
 
-@mixin thyme_class_responsive ($className, $css) {
+@mixin thyme_class_responsive($className, $css) {
   @each $name, $_ in $viewports {
     $prop: nth($css, 1);
     $value: nth($css, 2);
+    .#{$className} {
+      #{$prop}: #{$value};
+    }
     @media (--#{$name}) {
-      .#{$name}\:#{$className} { #{$prop}: #{$value} }
+      .#{$name}\:#{$className} {
+        #{$prop}: #{$value};
+      }
     }
   }
 }
-
