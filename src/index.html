@@ -2,68 +2,54 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link href="./compile.css" rel="stylesheet" />
-  <title>0</title>
-  <style>
-    body *,
-    html * {
-      box-sizing: border-box;
-    }
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link href="./compile.css" rel="stylesheet" />
+	<title>0</title>
+	<style>
+		body *,
+		html * {
+			box-sizing: border-box;
+		}
 
-    body {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
 </head>
 
 <body>
-  <div class="flex flex-column">
-    <div class="text-1 w-12/12 l:w-1/12  bg-4 p-2 mb-3">w-1/12</div>
-    <div class="text-2 w-12/12 l:w-2/12  bg-4 p-2 mb-3">w-2/12</div>
-    <div class="text-3 w-12/12 l:w-3/12  bg-4 p-2 mb-3">w-3/12</div>
-    <div class="text-1 w-12/12 l:w-4/12  bg-4 p-2 mb-3">w-4/12</div>
-    <div class="text-1 w-12/12 l:w-5/12  bg-4 p-2 mb-3">w-5/12</div>
-    <div class="text-1 w-12/12 l:w-6/12  bg-4 p-2 mb-3">w-6/12</div>
-    <div class="text-1 w-12/12 l:w-7/12  bg-4 p-2 mb-3">w-7/12</div>
-    <div class="text-1 w-12/12 l:w-8/12  bg-4 p-2 mb-3">w-8/12</div>
-    <div class="text-1 w-12/12 l:w-9/12  bg-4 p-2 mb-3">w-9/12</div>
-    <div class="text-1 w-12/12 l:w-10/12 bg-4 p-2 mb-3">w-10/12</div>
-    <div class="text-1 w-12/12 l:w-11/12 bg-4 p-2 mb-3">w-11/12</div>
-    <div class="text-1 w-12/12 l:w-12/12 bg-4 p-2 mb-3">w-12/12</div>
-  </div>
+	<div class="flex flex-col desktop:flex-row">
+		<div class="text-1 w-16/16 desktop:w-1/16  bg-03 p-xs mb-md">w-1/12</div>
+		<div class="text-2 w-16/16 desktop:w-2/16  bg-03 p-xs mb-md">w-2/12</div>
+		<div class="text-3 w-16/16 desktop:w-3/16  bg-03 p-xs mb-md">w-3/12</div>
+		<div class="text-1 w-16/16 desktop:w-4/16  bg-03 p-xs mb-md">w-4/12</div>
+		<div class="text-1 w-16/16 desktop:w-5/16  bg-03 p-xs mb-md">w-5/12</div>
+		<div class="text-1 w-16/16 desktop:w-6/16  bg-03 p-xs mb-md">w-6/12</div>
+		<div class="text-1 w-16/16 desktop:w-7/16  bg-03 p-xs mb-md">w-7/12</div>
+		<div class="text-1 w-16/16 desktop:w-8/16  bg-03 p-xs mb-md">w-8/12</div>
+		<div class="text-1 w-16/16 desktop:w-9/16  bg-03 p-xs mb-md">w-9/12</div>
+		<div class="text-1 w-16/16 desktop:w-10/16 bg-03 p-xs mb-md">w-10/12</div>
+		<div class="text-1 w-16/16 desktop:w-11/16 bg-03 p-xs mb-md">w-11/12</div>
+		<div class="text-1 w-16/16 desktop:w-12/16 bg-03 p-xs mb-md">w-12/12</div>
+	</div>
 
-  <div class="flex flex-column">
-    <div class="w-1/16 text-01 bg-01 p-m">w-1/1</div>
-    <div class="w-2/16 text-02 bg-02 p-m">w-2/2</div>
-    <div class="w-3/16 text-03 bg-03 p-m">w-3/3</div>
-    <div class="w-4/16 text-04 bg-04 p-m">w-4/4</div>
-    <div class="w-5/16 text-01 bg-01 p-m">w-5/5</div>
-    <div class="w-6/16 text-02 bg-02 p-m">w-6/6</div>
-    <div class="w-7/16 text-03 bg-03 p-m">w-7/7</div>
-    <div class="w-8/16 text-04 bg-04 p-m">w-8/8</div>
-  </div>
+	<div class="flex flex-column">
+		<div class="w-1/16 text-01 bg-01 p-m">w-1/1</div>
+		<div class="w-2/16 text-02 bg-02 p-m">w-2/2</div>
+		<div class="w-3/16 text-03 bg-03 p-m">w-3/3</div>
+		<div class="w-4/16 text-04 bg-04 p-m">w-4/4</div>
+		<div class="w-5/16 text-01 bg-01 p-m">w-5/5</div>
+		<div class="w-6/16 text-02 bg-02 p-m">w-6/6</div>
+		<div class="w-7/16 text-03 bg-03 p-m">w-7/7</div>
+		<div class="w-8/16 text-04 bg-04 p-m">w-8/8</div>
+	</div>
 
-  <div>
+	<div>
+		<div class="w-8/16 bg-02 p-md">1-16</div>
+	</div>
 
-    <ul class="component">
-      <li class="text-01 bg-01">ITEM</li>
-      <li class="text-01 bg-01">ITEM</li>
-      <li class="text-01 bg-01">ITEM</li>
-      <li class="text-01 bg-01">ITEM</li>
-      <li class="text-01 bg-01">ITEM</li>
-      <li class="text-01 bg-01">ITEM</li>
-    </ul>
-
-    <div class="vertical-stack-2">
-      <div>Stack 1</div>
-      <div>Stack 2</div>
-      <div>Stack 3</div>
-    </div>
-
-  </div>
 </body>
 
 </html>

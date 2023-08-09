@@ -19,31 +19,6 @@
   }
 }
 
-@mixin v-stack($size: 16px) {
-  & > * + * {
-    margin-top: $size;
-  }
-}
-
-@mixin r-v-stack($responsiveProps) {
-  // For initial width-breakpoint
-  @include v-stack(map.get($responsiveProps, 'def'));
-  // For larger widths
-  @each $mqName, $propValue in $responsiveProps {
-    @if ($mqName) {
-      @include media-query($mqName) {
-        @include v-stack($propValue);
-      }
-    }
-  }
-}
-
-@mixin h-stack($size: 16px) {
-  & > * + * {
-    margin-left: $size;
-  }
-}
-
 @mixin thyme_class($className, $properties, $tokens) {
   @each $name, $value in $tokens {
     @each $prop in $properties {

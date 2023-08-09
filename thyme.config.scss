@@ -11,32 +11,30 @@ $classes-prefixes: (
   margin-inline: 'mx-',
   margin-block: 'my-',
   padding: 'p-',
-  padding-top: 'p-',
-  padding-right: 'p-',
-  padding-bottom: 'p-',
-  padding-left: 'p-',
+  padding-top: 'pt-',
+  padding-right: 'pr-',
+  padding-bottom: 'pb-',
+  padding-left: 'pl-',
   padding-inline: 'px-',
   padding-block: 'py-'
 );
 
 // Breakpoint-name, breakpoint-min-width & container width
 $breakpoints: (
-  'sm': '(min-width: 480px)',
-  'md': '(min-width: 720px)',
-  'l': '(min-width: 960px)',
-  'xl': '(min-width: 1152px)',
-  'xxl': '(min-width: 1536px)'
+  'tablet': '(min-width: 720px)',
+  'desktop': '(min-width: 960px)',
+  'big-screen': '(min-width: 1152px)',
 );
 
 // Spacing
 $spacing: (
   'xs': var(--spc-xs),
-  's': var(--spc-s),
-  'm': var(--spc-m),
-  'l': var(--spc-l),
+  'sm': var(--spc-sm),
+  'md': var(--spc-md),
+  'lg': var(--spc-lg),
   'xl': var(--spc-xl),
-  'xxl': var(--spc-xxl),
-  'xxxl': var(--spc-xxxl)
+  '2xl': var(--spc-2xl),
+  '3xl': var(--spc-3xl)
 );
 
 $foreground-colors: (
