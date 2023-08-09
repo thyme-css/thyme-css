@@ -10,7 +10,7 @@ A utility first CSS for modern browsers.
 
 ## Why?
 
-To learn deep aspects of css (or not), that's all.
+To make an **small** sass utility classes for modern browsers
 
 ## Features
 
@@ -26,6 +26,10 @@ To learn deep aspects of css (or not), that's all.
 <button class="interactive-01 hover:interactive-01-hover">...</button>
 ```
 
+## Config file
+
+`thyme.config.scss`
+
 ## TODO:
 
 - set naming convention
@@ -39,4 +43,3 @@ To learn deep aspects of css (or not), that's all.
 **Illustration**
 
 <a href="https://www.freepik.es/vectors/flor">Vector de Flor creado por macrovector - www.freepik.es</a>
-

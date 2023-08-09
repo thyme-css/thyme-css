@@ -1,0 +1,54 @@
+$columns: 16;
+
+$classes-prefixes: (
+  background: 'bg-',
+  color: 'text-',
+  margin: 'm-',
+  margin-top: 'mt-',
+  margin-right: 'mr-',
+  margin-bottom: 'mb-',
+  margin-left: 'ml-',
+  margin-inline: 'mx-',
+  margin-block: 'my-',
+  padding: 'p-',
+  padding-top: 'p-',
+  padding-right: 'p-',
+  padding-bottom: 'p-',
+  padding-left: 'p-',
+  padding-inline: 'px-',
+  padding-block: 'py-'
+);
+
+// Breakpoint-name, breakpoint-min-width & container width
+$breakpoints: (
+  'sm': '(min-width: 480px)',
+  'md': '(min-width: 720px)',
+  'l': '(min-width: 960px)',
+  'xl': '(min-width: 1152px)',
+  'xxl': '(min-width: 1536px)'
+);
+
+// Spacing
+$spacing: (
+  'xs': var(--spc-xs),
+  's': var(--spc-s),
+  'm': var(--spc-m),
+  'l': var(--spc-l),
+  'xl': var(--spc-xl),
+  'xxl': var(--spc-xxl),
+  'xxxl': var(--spc-xxxl)
+);
+
+$foreground-colors: (
+  '01': var(--color-gray-01),
+  '02': var(--color-gray-02),
+  '03': var(--color-gray-03),
+  '04': var(--color-gray-04)
+);
+
+$background-colors: (
+  '01': var(--color-gray-04),
+  '02': var(--color-gray-03),
+  '03': var(--color-gray-02),
+  '04': var(--color-gray-01)
+);
