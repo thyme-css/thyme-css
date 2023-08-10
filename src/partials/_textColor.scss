@@ -1,3 +1,7 @@
+///
+/// `color`
+///
+
 @import '../../thyme.config.scss';
 
 @include thyme_class('text-', color, $foreground-colors);
