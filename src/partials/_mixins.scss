@@ -1,4 +1,9 @@
+///
+/// Thyme mixings
+///
+
 @use 'sass:map';
+
 @import '../../thyme.config.scss';
 
 @function get-thyme-config($key, $value) {
@@ -38,7 +43,9 @@
   }
 }
 
-@mixin thyme_class_responsive($className, $css) {
+// Create thyme responsive classes using configured breakpoints in
+// the thyme.config.scss file.
+@mixin thyme_responsive_class($className, $css) {
   @each $name, $_ in $breakpoints {
     $prop: nth($css, 1);
     $value: nth($css, 2);

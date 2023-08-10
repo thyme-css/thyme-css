@@ -1,4 +1,9 @@
+///
+/// `padding`
+///
+
 @use 'sass:map';
+
 @import '../../thyme.config.scss';
 
 $p: map.get($classes-prefixes, 'padding');
@@ -18,8 +23,6 @@ $py: map.get($classes-prefixes, 'padding-block');
 @include thyme_class($pb, padding-bottom, $spacing);
 @include thyme_class($pl, padding-left, $spacing);
 
-// padding inline
+// padding inline and block
 @include thyme_class($px, (padding-left, padding-right), $spacing);
-
-// padding block
 @include thyme_class($py, (padding-top, padding-bottom), $spacing);

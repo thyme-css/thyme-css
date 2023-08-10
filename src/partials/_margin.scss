@@ -1,4 +1,9 @@
+///
+/// `margin`
+///
+
 @use 'sass:map';
+
 @import '../../thyme.config.scss';
 
 $m: map.get($classes-prefixes, 'margin');
@@ -18,8 +23,6 @@ $my: map.get($classes-prefixes, 'margin-block');
 @include thyme_class($mb, margin-bottom, $spacing);
 @include thyme_class($ml, margin-left, $spacing);
 
-// Margin inline
+// Margin inline and block
 @include thyme_class($mx, (margin-left, margin-right), $spacing);
-
-// Margin block
 @include thyme_class($my, (margin-top, margin-bottom), $spacing);

@@ -1,16 +1,22 @@
+///
+/// `width`
+///
+
 @use 'sass:map';
 @use 'sass:math';
 
-/// Thyme utility file
 @import '../../thyme.config.scss';
 
 .w-screen {
   width: 100vw;
 }
+
 .w-full {
   width: 100%;
 }
 
+// w-screen
+// w-full
 @each $name, $_ in $breakpoints {
   @include media-query($name) {
     .#{$name}\:w-screen {
@@ -22,13 +28,16 @@
   }
 }
 
+// w-cols/cols
 @for $i from 1 through $columns {
   // Mobile <
+	// w-cols/cols
   .w-#{$i}\/#{$columns} {
     width: math.div($i, $columns) * 100%;
   }
 
   // > Mobile
+	// breakpointName:w-cols/cols
   @each $name, $_ in $breakpoints {
     @include media-query($name) {
       .#{$name}\:w-#{$i}\/#{$columns} {
